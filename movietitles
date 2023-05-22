@@ -1,0 +1,14 @@
+import re
+
+string = "I have come to ALU in 2022"
+
+pattern = r'(.*) in (\d{4})'
+match = re.match(pattern, string)
+
+if match:
+    title = match.group(1)  
+    year = match.group(2)  
+    print("Title:", title)
+    print("Year:", year)
+else:
+    print("No match found.")
